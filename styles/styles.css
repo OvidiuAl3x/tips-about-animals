@@ -40,21 +40,47 @@
   filter: blur(0px);
 }
 
+.section {
+  background-color: #f2f6ff;
+  min-height: 100vh;
+  display: block;
+  opacity: 1;
+  padding: 0px 30px;
+  position: fixed;
+  left: 272px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
 .main-container .aside {
   width: 270px;
-  background-color: #f2f6ff;
   position: fixed;
   left: 0;
   top: 0;
-  padding: 30px;
   height: 100%;
   border: 1px solid rgba(110, 112, 162, 0.2745098039);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+.main-container .aside .aside-page {
+  transform: translate(20px, 50px);
+  text-align: center;
+}
+.main-container .aside .aside-page img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 .main-container .aside .aside-page p {
+  margin-top: 10px;
   font-size: 24px;
 }
 .main-container .aside .nav {
@@ -71,6 +97,7 @@
   display: block;
   padding: 5px 15px;
   border-bottom: 1px solid rgba(110, 112, 162, 0.2745098039);
+  cursor: pointer;
 }
 .main-container .aside .nav li a i {
   margin-right: 15px;

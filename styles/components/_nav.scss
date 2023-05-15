@@ -3,22 +3,28 @@
 .main-container {
   .aside {
     width: 270px;
-    background-color: style.$colorNeutral;
     position: fixed;
     left: 0;
     top: 0;
-    padding: 30px;
     height: 100%;
     border: 1px solid style.$colorSecondary25;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // transition: all 0.3s ease;
-    .aside-page{
-        p{
-            font-size: style.$fontHeadingH4;
-        }
+    transition: all 0.3s ease;
+    .aside-page {
+      transform: translate(20px, 50px);
+      text-align: center;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      p {
+        margin-top: 10px;
+        font-size: style.$fontHeadingH4;
+      }
     }
     .nav {
       margin: auto;
@@ -32,6 +38,7 @@
           display: block;
           padding: 5px 15px;
           border-bottom: 1px solid style.$colorSecondary25;
+          cursor: pointer;
           i {
             margin-right: 15px;
             font-size: style.$fontBodyMain;

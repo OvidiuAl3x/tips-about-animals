@@ -1,2 +1,19 @@
 @use "../abstracts/index" as style;
 
+.section{
+    background-color: style.$colorNeutral;
+    // background-color: red;
+    min-height: 100vh;
+    display: block;
+    opacity: 1;
+    padding: 0px 30px;
+    position: fixed;
+    left: 272px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
