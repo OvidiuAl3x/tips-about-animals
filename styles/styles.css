@@ -40,6 +40,43 @@
   filter: blur(0px);
 }
 
+.main-container .aside {
+  width: 270px;
+  background-color: #f2f6ff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  border: 1px solid rgba(110, 112, 162, 0.2745098039);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container .aside .aside-page p {
+  font-size: 24px;
+}
+.main-container .aside .nav {
+  margin: auto;
+}
+.main-container .aside .nav li {
+  margin: 30px 0px;
+  list-style: none;
+}
+.main-container .aside .nav li a {
+  text-decoration: none;
+  color: #16194f;
+  font-size: 17px;
+  display: block;
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(110, 112, 162, 0.2745098039);
+}
+.main-container .aside .nav li a i {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
 * {
   margin: 0px;
 }/*# sourceMappingURL=styles.css.map */
