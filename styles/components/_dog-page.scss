@@ -1,8 +1,9 @@
 @use "../abstracts/index" as style;
 
+
+// Maybe it's unniversal and need to move 
 .section{
     background-color: style.$colorNeutral;
-    // background-color: red;
     min-height: 100vh;
     display: block;
     opacity: 1;
@@ -17,3 +18,5 @@
     overflow-x: hidden;
     transition: all 0.3s ease;
 }
+
+

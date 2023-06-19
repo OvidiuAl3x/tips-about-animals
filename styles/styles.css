@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   height: 100vh;
   justify-content: center;
+  overflow: hidden;
 }
 .container-home .h1-home {
   position: absolute;
@@ -79,9 +80,24 @@
   height: 80px;
   border-radius: 50%;
 }
-.main-container .aside .aside-page p {
+.main-container .aside .aside-page .drop-down summary {
   margin-top: 10px;
-  font-size: 24px;
+  margin-right: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  color: #16194f;
+  font-weight: 600;
+}
+.main-container .aside .aside-page .drop-down p {
+  margin: 6px;
+}
+.main-container .aside .aside-page .drop-down p a {
+  text-decoration: none;
+  color: #6e70a2;
+}
+.main-container .aside .aside-page .drop-down p a:hover {
+  color: #16194f;
+  font-weight: 600;
 }
 .main-container .aside .nav {
   margin: auto;

@@ -21,9 +21,26 @@
         height: 80px;
         border-radius: 50%;
       }
-      p {
-        margin-top: 10px;
-        font-size: style.$fontHeadingH4;
+      .drop-down {
+        summary {
+          margin-top: 10px;
+          margin-right: 10px;
+          font-size: style.$fontMediumText;
+          cursor: pointer;
+          color: style.$colorPrimary;
+          font-weight: 600;
+        }
+        p {
+          margin: 6px;
+          a {
+            text-decoration: none;
+            color: style.$colorSecondary;
+            &:hover {
+              color: style.$colorPrimary;
+              font-weight: 600;
+            }
+          }
+        }
       }
     }
     .nav {
