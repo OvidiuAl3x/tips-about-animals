@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="aside">
+      <div class="aside" id="nav-js">
         <div class="aside-page">
           <img src="../images/home/dog.jpg" alt="" />
           <details class="drop-down">
@@ -22,6 +22,7 @@
             <p><a href="">Parrots</a></p>
             <p><a href="">Rodents</a></p>
           </details>
+          <div class="open-nav" onclick="openNav()"><p>&#9552;</p></div>
         </div>
 
         <ul class="nav">
@@ -56,12 +57,12 @@
         <section class="history section" id="history">
           <div class="container">
             <h1>Dog History</h1>
-            <p id="dog">
-            </p>
+            <p id="dog"></p>
           </div>
         </section>
       </div>
     </div>
-    <script type="module" src="../service/dog-data.js"></script>
+    <script type="module" src="../js/service/dog-data.js"></script>
+    <script type="module" src="../js/nav-bar.js"></script>
   </body>
 </html>

@@ -42,19 +42,8 @@
 }
 
 .section {
-  background-color: #f2f6ff;
-  min-height: 100vh;
-  display: block;
-  opacity: 1;
   padding: 0px 30px;
-  position: fixed;
-  left: 272px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
   z-index: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
   transition: all 0.3s ease;
 }
 
@@ -67,15 +56,14 @@
 .main-container .aside {
   width: 270px;
   position: fixed;
-  left: 0;
+  left: -300px;
   top: 0;
   height: 100%;
   border: 1px solid rgba(110, 112, 162, 0.2745098039);
+  background-color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .main-container .aside .aside-page {
   transform: translate(20px, 50px);
@@ -125,7 +113,39 @@
   margin-right: 15px;
   font-size: 20px;
 }
+.main-container .aside .open-nav {
+  position: absolute;
+  left: 17em;
+  top: -10px;
+  transition: all 0.3s ease;
+  opacity: 10%;
+}
+.main-container .aside .open-nav:hover {
+  opacity: 100%;
+}
+.main-container .aside .open-nav p {
+  font-size: 25px;
+  background-color: #a44ef5;
+  border-top: 1px solid #f2f6ff;
+  border-right: 1px solid #f2f6ff;
+  border-bottom: 1px solid #f2f6ff;
+  color: #f2f6ff;
+  padding: 0px 13px;
+  cursor: pointer;
+}
+.main-container .aside .close-nav {
+  left: 15.6em;
+  transition: all 0.3s ease;
+}
+.main-container .open-aside {
+  left: 0;
+  transition: all 0.5s ease;
+}
 
 * {
   margin: 0px;
+}
+
+body {
+  background-color: #f2f6ff;
 }/*# sourceMappingURL=styles.css.map */

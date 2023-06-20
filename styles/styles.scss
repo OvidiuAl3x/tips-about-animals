@@ -1,7 +1,12 @@
+@use "../styles/abstracts/index" as style;
 @use "../styles/components/home";
 @use "../styles/components/dog-page";
 @use "../styles/components/nav";
 
-*{
-    margin: 0px;
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: style.$colorNeutral;
 }

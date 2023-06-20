@@ -4,15 +4,16 @@
   .aside {
     width: 270px;
     position: fixed;
-    left: 0;
+    left: -300px;
     top: 0;
     height: 100%;
     border: 1px solid style.$colorSecondary25;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     flex-direction: column;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     .aside-page {
       transform: translate(20px, 50px);
       text-align: center;
@@ -63,5 +64,33 @@
         }
       }
     }
+    .open-nav {
+      position: absolute;
+      left: 17em;
+      top: -10px;
+      transition: all 0.3s ease;
+      opacity: 10%;
+      &:hover {
+        opacity: 100%;
+      }
+      p {
+        font-size: 25px;
+        background-color: style.$colorAccent;
+        border-top: 1px solid style.$colorNeutral;
+        border-right: 1px solid style.$colorNeutral;
+        border-bottom: 1px solid style.$colorNeutral;
+        color: style.$colorNeutral;
+        padding: 0px 13px;
+        cursor: pointer;
+      }
+    }
+    .close-nav {
+      left: 15.6em;
+      transition: all 0.3s ease;
+    }
+  }
+  .open-aside {
+    left: 0;
+    transition: all 0.5s ease;
   }
 }
