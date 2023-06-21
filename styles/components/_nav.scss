@@ -10,10 +10,7 @@
     border: 1px solid style.$colorSecondary25;
     background-color: white;
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     flex-direction: column;
-    transition: all 0.5s ease;
     .aside-page {
       transform: translate(20px, 50px);
       text-align: center;
@@ -23,24 +20,27 @@
         border-radius: 50%;
       }
       .drop-down {
-        summary {
-          margin-top: 10px;
-          margin-right: 10px;
-          font-size: style.$fontMediumText;
-          cursor: pointer;
-          color: style.$colorPrimary;
-          font-weight: 600;
+        margin-top: 10px;
+        font-size: style.$fontMediumText;
+        color: style.$colorPrimary;
+        font-weight: 600;
+        .links {
+          display: flex;
+          flex-direction: column;
+          opacity: 0;
         }
-        p {
-          margin: 6px;
-          a {
-            text-decoration: none;
-            color: style.$colorSecondary;
-            &:hover {
-              color: style.$colorPrimary;
-              font-weight: 600;
-            }
+        .link {
+          text-decoration: none;
+          color: style.$colorSecondary;
+          margin-top: 8px;
+          display: inline-block;
+          &:hover {
+            color: style.$colorPrimary;
+            font-weight: 600;
           }
+        }
+        .link-show {
+          opacity: 1;
         }
       }
     }
@@ -68,7 +68,7 @@
       position: absolute;
       left: 17em;
       top: -10px;
-      transition: all 0.3s ease;
+
       opacity: 10%;
       &:hover {
         opacity: 100%;
@@ -86,11 +86,9 @@
     }
     .close-nav {
       left: 15.6em;
-      transition: all 0.3s ease;
     }
   }
   .open-aside {
     left: 0;
-    transition: all 0.5s ease;
   }
 }

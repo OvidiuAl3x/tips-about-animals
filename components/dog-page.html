@@ -16,13 +16,25 @@
       <div class="aside" id="nav-js">
         <div class="aside-page">
           <img src="../images/home/dog.jpg" alt="" />
-          <details class="drop-down">
-            <summary>Dogs</summary>
-            <p><a href="">Cats</a></p>
-            <p><a href="">Parrots</a></p>
-            <p><a href="">Rodents</a></p>
-          </details>
-          <div class="open-nav" onclick="openNav()"><p>&#9552;</p></div>
+          <!-- delete details and make a dropdown -->
+          <div class="drop-down">
+            <p>
+              Dogs
+              <i
+                class="fa-solid fa-arrow-down fa-xs"
+                style="top: 2px; position: relative; cursor: pointer"
+                id="selectPage"
+              ></i>
+            </p>
+            <div class="links">
+              <p><a href="" class="link">Cats</a></p>
+              <p><a href="" class="link">Parrots</a></p>
+              <p><a href="" class="link">Rodents</a></p>
+            </div>
+          </div>
+          <div class="open-nav" onclick="openNav()" id="open-nav">
+            <p>&#9552;</p>
+          </div>
         </div>
 
         <ul class="nav">
