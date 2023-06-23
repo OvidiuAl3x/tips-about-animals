@@ -16,7 +16,6 @@
       <div class="aside" id="nav-js">
         <div class="aside-page">
           <img src="../images/home/dog.jpg" alt="" />
-          <!-- delete details and make a dropdown -->
           <div class="drop-down">
             <p>
               Dogs
@@ -39,48 +38,92 @@
 
         <ul class="nav">
           <li>
-            <a href="../index.html"
+            <a href="#history"
               ><i class="fa-solid fa-shield-dog"></i> Dog History</a
             >
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-shield-dog"></i>Food</a>
+            <a href="#food"><i class="fa-solid fa-shield-dog"></i>Food</a>
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-shield-dog"></i>Treats</a>
+            <a href="#treats"><i class="fa-solid fa-shield-dog"></i>Treats</a>
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-shield-dog"></i>Bowls</a>
+            <a href="#bowls"><i class="fa-solid fa-shield-dog"></i>Bowls</a>
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-shield-dog"></i>Bed</a>
+            <a href="#bed"><i class="fa-solid fa-shield-dog"></i>Bed</a>
           </li>
           <li>
-            <a href=""
+            <a href="#leashes"
               ><i class="fa-solid fa-shield-dog"></i>Leashes & Collars</a
             >
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-shield-dog"></i>Toys</a>
+            <a href="#toys"><i class="fa-solid fa-shield-dog"></i>Toys</a>
           </li>
         </ul>
       </div>
       <div class="main-content">
+        <!--======================================== START SECTION: HISTORY ========================================-->
         <section class="history section" id="history">
-          <h1>Dog History</h1>
+          <h1 class="h1-dog">Dog History</h1>
           <div class="container">
             <div class="history-p">
               <p class="dog-history"></p>
             </div>
             <div class="history-img">
-              <img src="https://placehold.co/300x300" alt="" />
-              <img src="https://placehold.co/300x300" alt="" />
+              <img src="https://placehold.co/300x300" alt="" class="js-anim" />
+              <img src="https://placehold.co/300x300" alt="" class="js-anim" />
             </div>
           </div>
         </section>
+        <!--======================================== END SECTION: HISTORY ========================================-->
+
+        <!--======================================== START SECTION: FOOD ========================================-->
+        <section class="food section reveal" id="food">
+          <h1 class="h1-dog">Food</h1>
+          <div class="container">
+            <div class="food-img">
+              <div title="img-1">
+                <img src="https://placehold.co/250x300" alt="" />
+                <p>Premium</p>
+              </div>
+              <div title="img-2">
+                <img src="https://placehold.co/250x300" alt="" />
+                <p>Premium</p>
+              </div>
+              <div title="img-3">
+                <img src="https://placehold.co/250x300" alt="" />
+                <p>Premium</p>
+              </div>
+              <div title="img-4">
+                <img src="https://placehold.co/250x300" alt="" />
+                <p>Premium</p>
+              </div>
+              <div title="img-5">
+                <img src="https://placehold.co/250x300" alt="" />
+                <p>Premium</p>
+              </div>
+            </div>
+            <div class="food-p">
+              <div>
+                <h2>Lorem</h2>
+                <p class="dog-food"></p>
+              </div>
+
+              <div>
+                <h2>Lorem</h2>
+                <p class="dog-food"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--======================================== END SECTION: FOOD ========================================-->
       </div>
     </div>
     <script type="module" src="../js/service/dog-data.js"></script>
     <script type="module" src="../js/nav-bar.js"></script>
+    <script type="module" src="../js/animation.js"></script>
   </body>
 </html>

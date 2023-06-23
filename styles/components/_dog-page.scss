@@ -17,19 +17,18 @@
   // transition: all 0.3s ease;
 }
 
+.h1-dog {
+  margin: 30px;
+  font-size: style.$fontHeadingH3;
+  text-decoration: underline style.$colorAccent;
+  animation: h1 1.2s ease-in-out;
+}
+
 .history {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
-  h1 {
-    margin: 30px;
-    font-size: style.$fontHeadingH3;
-    text-decoration: underline style.$colorAccent;
-    position: relative;
-    animation: h1 1.2s ease-in-out;
-
-  }
   .container {
     min-height: 65vh;
     margin: 30px;
@@ -53,43 +52,124 @@
       flex: 0 0 40%;
       max-width: 40%;
       text-align: center;
-      img:first-child {
-        position: relative;
-        transform: translate(-10px, -50px);
-        animation: image 2s ease-in-out;
+      img {
         box-shadow: 0px 5px 10px style.$colorPrimary;
         border-radius: 26px;
       }
+      img:first-child {
+        transform: translate(-10px, -50px);
+        animation: image 2s ease-in-out;
+      }
       img:last-child {
-        position: relative;
         transform: translate(10px, 150px);
         animation: image2 2s ease-in-out;
-        box-shadow: 0px 5px 10px style.$colorPrimary;
-        border-radius: 26px;
       }
     }
   }
+}
+
+.food {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+  .h1-dog {
+    margin: 30px;
+    font-size: style.$fontHeadingH3;
+    text-decoration: underline style.$colorAccent;
+  }
+  .container {
+    margin: 30px;
+  }
+  .food-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    div {
+      margin: 0px 20px 50px 20px;
+      text-align: center;
+
+      img {
+        box-shadow: 0px 5px 10px style.$colorPrimary;
+        border-radius: 12px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: style.$fontCaptionText;
+      }
+    }
+  }
+  .food-p {
+    display: flex;
+    h2 {
+      text-align: center;
+      margin: 10px;
+    }
+    p {
+      margin: 0px 20px;
+      font-size: style.$fontMediumText;
+    }
+    p::first-letter {
+      font-weight: bold;
+      font-size: style.$fontHeadingH4;
+    }
+  }
+}
+
+.reveal {
+  opacity: 1;
+  position: relative;
+}
+.reveal.active {
+  opacity: 1;
+}
+
+.active .h1-dog {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active [title="img-1"] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+.active [title="img-2"] {
+  animation: imageShuffler 1.5s ease-in-out 0.25s both;
+}
+.active [title="img-3"] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
+}
+.active [title="img-4"] {
+  animation: imageShuffler 1.5s ease-in-out 1s both;
+}
+.active [title="img-5"] {
+  animation: imageShuffler 1.5s ease-in-out 1.5s both;
+}
+.active .dog-food {
+  animation: text 2s ease-in-out;
+}
+.active .food-p h2 {
+  animation: text 2s ease-in-out;
 }
 
 @keyframes image {
   from {
     opacity: 0;
     position: relative;
-    top: 200px;
+    transform: translate(-10px, -250px);
   }
   to {
     opacity: 1;
-    top: 0px;
+    transform: translate(-10px, -50px);
   }
 }
 @keyframes image2 {
   from {
     opacity: 0;
-    bottom: 200px;
+    transform: translate(10px, 250px);
   }
   to {
     opacity: 1;
-    bottom: 0px;
+    transform: translate(10px, 150px);
   }
 }
 
@@ -103,11 +183,31 @@
     transform: scale(1);
   }
 }
+
 @keyframes h1 {
   from {
-    top: -200px;
+    transform: translateY(-200px);
   }
   to {
-    top: 0px;
+    transform: translateY(0);
+  }
+}
+@keyframes h1-active {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageShuffler {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

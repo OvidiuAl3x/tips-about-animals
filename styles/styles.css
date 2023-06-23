@@ -46,19 +46,19 @@
   z-index: 0;
 }
 
+.h1-dog {
+  margin: 30px;
+  font-size: 40px;
+  -webkit-text-decoration: underline #a44ef5;
+          text-decoration: underline #a44ef5;
+  animation: h1 1.2s ease-in-out;
+}
+
 .history {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
-}
-.history h1 {
-  margin: 30px;
-  font-size: 40px;
-  -webkit-text-decoration: underline #a44ef5;
-          text-decoration: underline #a44ef5;
-  position: relative;
-  animation: h1 1.2s ease-in-out;
 }
 .history .container {
   min-height: 65vh;
@@ -83,40 +83,128 @@
   max-width: 40%;
   text-align: center;
 }
-.history .container .history-img img:first-child {
-  position: relative;
-  transform: translate(-10px, -50px);
-  animation: image 2s ease-in-out;
+.history .container .history-img img {
   box-shadow: 0px 5px 10px #16194f;
   border-radius: 26px;
 }
+.history .container .history-img img:first-child {
+  transform: translate(-10px, -50px);
+  animation: image 2s ease-in-out;
+}
 .history .container .history-img img:last-child {
-  position: relative;
   transform: translate(10px, 150px);
   animation: image2 2s ease-in-out;
+}
+
+.food {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+}
+.food .h1-dog {
+  margin: 30px;
+  font-size: 40px;
+  -webkit-text-decoration: underline #a44ef5;
+          text-decoration: underline #a44ef5;
+}
+.food .container {
+  margin: 30px;
+}
+.food .food-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.food .food-img div {
+  margin: 0px 20px 50px 20px;
+  text-align: center;
+}
+.food .food-img div img {
   box-shadow: 0px 5px 10px #16194f;
-  border-radius: 26px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.food .food-img div p {
+  font-size: 15px;
+}
+.food .food-p {
+  display: flex;
+}
+.food .food-p h2 {
+  text-align: center;
+  margin: 10px;
+}
+.food .food-p p {
+  margin: 0px 20px;
+  font-size: 17px;
+}
+.food .food-p p::first-letter {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.reveal {
+  opacity: 1;
+  position: relative;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.active .h1-dog {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active [title=img-1] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+
+.active [title=img-2] {
+  animation: imageShuffler 1.5s ease-in-out 0.25s both;
+}
+
+.active [title=img-3] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
+}
+
+.active [title=img-4] {
+  animation: imageShuffler 1.5s ease-in-out 1s both;
+}
+
+.active [title=img-5] {
+  animation: imageShuffler 1.5s ease-in-out 1.5s both;
+}
+
+.active .dog-food {
+  animation: text 2s ease-in-out;
+}
+
+.active .food-p h2 {
+  animation: text 2s ease-in-out;
 }
 
 @keyframes image {
   from {
     opacity: 0;
     position: relative;
-    top: 200px;
+    transform: translate(-10px, -250px);
   }
   to {
     opacity: 1;
-    top: 0px;
+    transform: translate(-10px, -50px);
   }
 }
 @keyframes image2 {
   from {
     opacity: 0;
-    bottom: 200px;
+    transform: translate(10px, 250px);
   }
   to {
     opacity: 1;
-    bottom: 0px;
+    transform: translate(10px, 150px);
   }
 }
 @keyframes text {
@@ -131,10 +219,28 @@
 }
 @keyframes h1 {
   from {
-    top: -200px;
+    transform: translateY(-200px);
   }
   to {
-    top: 0px;
+    transform: translateY(0);
+  }
+}
+@keyframes h1-active {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes imageShuffler {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .main-container .aside {
@@ -148,7 +254,7 @@
   display: flex;
   flex-direction: column;
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .main-container .aside .aside-page {
   transform: translate(20px, 50px);
@@ -232,6 +338,7 @@
 
 * {
   margin: 0px;
+  scroll-behavior: smooth;
 }
 
 body {
