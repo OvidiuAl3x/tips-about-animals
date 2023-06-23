@@ -3,11 +3,13 @@ import data from "./db.json" assert { type: "json" };
 const { history, food, treats, bowls, bed, leashes, collars, toys } = data.dog;
 const getHistory = document.querySelector(".dog-history");
 const getFood = document.querySelectorAll(".dog-food");
+const getTreats = document.querySelectorAll(".dog-treats");
 // get.innerHTML = history + food + treats + `<h1>${bed}</h1>`;
 getHistory.innerHTML += history;
 
 getFood.forEach(function (element) {
   element.innerHTML += food;
 });
-
-
+getTreats.forEach(function (element) {
+  element.innerHTML += food;
+});

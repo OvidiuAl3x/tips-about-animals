@@ -131,6 +131,7 @@
 }
 .food .food-p {
   display: flex;
+  z-index: 2;
 }
 .food .food-p h2 {
   text-align: center;
@@ -145,6 +146,50 @@
   font-size: 24px;
 }
 
+.treats {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+}
+.treats .h1-treats {
+  margin: 30px;
+  font-size: 40px;
+  -webkit-text-decoration: underline #a44ef5;
+          text-decoration: underline #a44ef5;
+}
+.treats .container {
+  margin: 30px;
+}
+.treats .treats-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.treats .treats-img .first {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: center;
+}
+.treats .treats-img .first img {
+  box-shadow: 0px 5px 10px #16194f;
+  border-radius: 12px;
+  margin: 50px;
+}
+.treats .treats-img .second {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.treats .treats-img .second p {
+  font-size: 15px;
+  margin-top: 50px;
+}
+.treats .treats-img .second p::first-letter {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .reveal {
   opacity: 1;
   position: relative;
@@ -155,6 +200,10 @@
 }
 
 .active .h1-food {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active .h1-treats {
   animation: h1-active 1.2s ease-in-out;
 }
 
@@ -178,12 +227,28 @@
   animation: imageShuffler 1.5s ease-in-out 1.5s both;
 }
 
+.active [title=img-treats-1] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+
+.active [title=img-treats-2] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
+}
+
 .active .dog-food {
   animation: text 2s ease-in-out;
 }
 
 .active .food-p h2 {
   animation: text 2s ease-in-out;
+}
+
+.active [title=p-treats-1] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+
+.active [title=p-treats-2] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 
 @keyframes image {
@@ -359,4 +424,54 @@
 body {
   background-color: #f2f6ff;
   color: #16194f;
+}
+
+.hr {
+  display: flex;
+  z-index: -1;
+  position: relative;
+  height: 20px;
+  filter: blur(5px);
+}
+.hr div:first-child {
+  flex: 0 0 12%;
+  max-width: 50%;
+  margin-left: 30px;
+  transform: translateY(30px);
+}
+.hr div:first-child hr {
+  margin: 15px 0px;
+  border: 5px dashed rgba(110, 112, 162, 0.2745098039);
+  border-radius: 20px;
+}
+.hr div:first-child hr:first-child {
+  border: 5px dashed #a44ef5;
+}
+.hr div:last-child {
+  flex: 0 0 20%;
+  max-width: 30%;
+  margin-right: 40px;
+  margin-left: auto;
+  transform: translateY(-170px);
+}
+.hr div:last-child hr {
+  margin: 15px 0px;
+  border: 5px dashed rgba(110, 112, 162, 0.2745098039);
+  border-radius: 20px;
+}
+.hr div:last-child hr:last-child {
+  border: 3px dashed #a44ef5;
+}
+
+.hr {
+  animation: hr 2s ease-in-out;
+}
+
+@keyframes hr {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */

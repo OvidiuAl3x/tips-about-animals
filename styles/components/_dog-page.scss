@@ -41,11 +41,10 @@
       font-size: style.$fontBodyMain;
       p {
         animation: text 2s ease-in-out;
-      }
-
-      p::first-letter {
-        font-weight: bold;
-        font-size: style.$fontHeadingH3;
+        &::first-letter {
+          font-weight: bold;
+          font-size: style.$fontHeadingH3;
+        }
       }
     }
     .history-img {
@@ -102,6 +101,7 @@
   }
   .food-p {
     display: flex;
+    z-index: 2;
     h2 {
       text-align: center;
       margin: 10px;
@@ -109,10 +109,52 @@
     p {
       margin: 0px 20px;
       font-size: style.$fontMediumText;
+      &::first-letter {
+        font-weight: bold;
+        font-size: style.$fontHeadingH4;
+      }
     }
-    p::first-letter {
-      font-weight: bold;
-      font-size: style.$fontHeadingH4;
+  }
+}
+.treats {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+  .h1-treats {
+    margin: 30px;
+    font-size: style.$fontHeadingH3;
+    text-decoration: underline style.$colorAccent;
+  }
+  .container {
+    margin: 30px;
+  }
+  .treats-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .first {
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+      img {
+        box-shadow: 0px 5px 10px style.$colorPrimary;
+        border-radius: 12px;
+        margin: 50px;
+      }
+    }
+    .second {
+      flex: 0 0 50%;
+      max-width: 50%;
+      p {
+        font-size: style.$fontCaptionText;
+        margin-top: 50px;
+        &::first-letter {
+          font-weight: bold;
+          font-size: style.$fontHeadingH4;
+        }
+      }
     }
   }
 }
@@ -125,10 +167,16 @@
   opacity: 1;
 }
 
+// H1 animation
 .active .h1-food {
   animation: h1-active 1.2s ease-in-out;
 }
 
+.active .h1-treats {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+// Image animation
 .active [title="img-1"] {
   animation: imageShuffler 1.5s ease-in-out both;
 }
@@ -144,11 +192,27 @@
 .active [title="img-5"] {
   animation: imageShuffler 1.5s ease-in-out 1.5s both;
 }
+
+.active [title="img-treats-1"] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+.active [title="img-treats-2"] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
+}
+
+// text animation
 .active .dog-food {
   animation: text 2s ease-in-out;
 }
 .active .food-p h2 {
   animation: text 2s ease-in-out;
+}
+
+.active [title="p-treats-1"] {
+  animation: imageShuffler 1.5s ease-in-out both;
+}
+.active [title="p-treats-2"] {
+  animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 
 @keyframes image {
