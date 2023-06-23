@@ -17,7 +17,7 @@
   // transition: all 0.3s ease;
 }
 
-.h1-dog {
+.h1-history {
   margin: 30px;
   font-size: style.$fontHeadingH3;
   text-decoration: underline style.$colorAccent;
@@ -73,7 +73,7 @@
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
-  .h1-dog {
+  .h1-food {
     margin: 30px;
     font-size: style.$fontHeadingH3;
     text-decoration: underline style.$colorAccent;
@@ -125,7 +125,7 @@
   opacity: 1;
 }
 
-.active .h1-dog {
+.active .h1-food {
   animation: h1-active 1.2s ease-in-out;
 }
 

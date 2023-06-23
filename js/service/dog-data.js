@@ -9,3 +9,5 @@ getHistory.innerHTML += history;
 getFood.forEach(function (element) {
   element.innerHTML += food;
 });
+
+

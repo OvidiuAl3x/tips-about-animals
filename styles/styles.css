@@ -46,7 +46,7 @@
   z-index: 0;
 }
 
-.h1-dog {
+.h1-history {
   margin: 30px;
   font-size: 40px;
   -webkit-text-decoration: underline #a44ef5;
@@ -102,7 +102,7 @@
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
 }
-.food .h1-dog {
+.food .h1-food {
   margin: 30px;
   font-size: 40px;
   -webkit-text-decoration: underline #a44ef5;
@@ -154,7 +154,7 @@
   opacity: 1;
 }
 
-.active .h1-dog {
+.active .h1-food {
   animation: h1-active 1.2s ease-in-out;
 }
 
@@ -328,9 +328,6 @@
   color: #f2f6ff;
   padding: 0px 13px;
   cursor: pointer;
-}
-.main-container .aside .close-nav {
-  left: 15.6em;
 }
 .main-container .open-aside {
   left: 0;
