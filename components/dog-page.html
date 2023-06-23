@@ -15,6 +15,9 @@
     <div class="main-container">
       <div class="aside" id="nav-js">
         <div class="aside-page">
+          <div class="close-nav" onclick="openNav()">
+            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+          </div>
           <img src="../images/home/dog.jpg" alt="" />
           <div class="drop-down">
             <p>
@@ -31,14 +34,14 @@
               <p><a href="" class="link">Rodents</a></p>
             </div>
           </div>
-          <div class="open-nav" onclick="openNav()" id="open-nav">
+          <div class="open-nav" onclick="openNav()">
             <p>&#9552;</p>
           </div>
         </div>
 
         <ul class="nav">
           <li>
-            <a href="#history" class="select"
+            <a href="#history" class="select select-active"
               ><i class="fa-solid fa-shield-dog"></i> Dog History</a
             >
           </li>
