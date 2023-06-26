@@ -1,203 +1,154 @@
 @use "../abstracts/index" as style;
 
 // Maybe it's unniversal and need to move
-.section {
-  // min-height: 100vh;
-  // display: block;
-  // opacity: 1;
-  padding: 0px 30px;
-  // position: fixed;
-  // left: 272px;
-  // top: 0px;
-  // right: 0px;
-  // bottom: 0px;
-  z-index: 0;
-  // overflow-y: auto;
-  // overflow-x: hidden;
-  // transition: all 0.3s ease;
-}
-
-.h1-history {
-  margin: 30px;
-  font-size: style.$fontHeadingH3;
-  text-decoration: underline style.$colorAccent;
-  animation: h1 1.2s ease-in-out;
-}
-
-.history {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
+.main-content {
+  .section {
+    padding: 0px 30px;
+    z-index: 0;
+    min-height: calc(100vh - 30px);
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    word-spacing: 1.6px;
+  }
   .container {
-    min-height: 65vh;
     margin: 30px;
-    display: flex;
-    align-items: center;
+  }
+  h1 {
+    margin: 30px;
+    font-size: style.$fontHeadingH3;
+    text-decoration: underline style.$colorAccent;
+  }
+  .dog-text {
+    margin: 0px 20px;
+    &::first-letter {
+      font-weight: bold;
+      font-size: style.$fontHeadingH3;
+    }
+  }
+  img {
+    box-shadow: 0px 5px 10px style.$colorPrimary;
+    border-radius: 26px;
+  }
 
-    .history-p {
-      flex: 0 0 60%;
-      max-width: 60%;
-      font-size: style.$fontBodyMain;
-      p {
-        animation: text 2s ease-in-out;
-        &::first-letter {
-          font-weight: bold;
-          font-size: style.$fontHeadingH3;
+  //  HISTORY
+  .history {
+    .h1-history {
+      animation: h1 1.2s ease-in-out;
+    }
+    .container {
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      .history-p {
+        @include style.child-flex(60%, 60%);
+        font-size: style.$fontBodyMain;
+        p {
+          animation: text 2s ease-in-out;
         }
       }
-    }
-    .history-img {
-      flex: 0 0 40%;
-      max-width: 40%;
-      text-align: center;
-      img {
-        box-shadow: 0px 5px 10px style.$colorPrimary;
-        border-radius: 26px;
-      }
-      img:first-child {
-        transform: translate(-10px, -50px);
-        animation: image 2s ease-in-out;
-      }
-      img:last-child {
-        transform: translate(10px, 150px);
-        animation: image2 2s ease-in-out;
-      }
-    }
-  }
-}
-
-.origins {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-  .h1-origins {
-    margin: 30px;
-    font-size: style.$fontHeadingH3;
-    text-decoration: underline style.$colorAccent;
-  }
-  .container {
-    margin: 30px;
-  }
-  .origins-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    div {
-      margin: 0px 20px 50px 20px;
-      text-align: center;
-
-      img {
-        box-shadow: 0px 5px 10px style.$colorPrimary;
-        border-radius: 12px;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: style.$fontCaptionText;
-      }
-    }
-  }
-  .origins-p {
-    display: flex;
-    z-index: 2;
-    h2 {
-      text-align: center;
-      margin: 10px;
-    }
-    p {
-      margin: 0px 20px;
-      font-size: style.$fontMediumText;
-      &::first-letter {
-        font-weight: bold;
-        font-size: style.$fontHeadingH4;
-      }
-    }
-  }
-}
-.breeds {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-  .h1-breeds {
-    margin: 30px;
-    font-size: style.$fontHeadingH3;
-    text-decoration: underline style.$colorAccent;
-  }
-  .container {
-    margin: 30px;
-  }
-  .breeds-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    .first {
-      flex: 0 0 50%;
-      max-width: 50%;
-      text-align: center;
-      img {
-        box-shadow: 0px 5px 10px style.$colorPrimary;
-        border-radius: 12px;
-        margin: 50px;
-      }
-    }
-    .second {
-      flex: 0 0 50%;
-      max-width: 50%;
-      p {
-        font-size: style.$fontCaptionText;
-        margin-top: 50px;
-        &::first-letter {
-          font-weight: bold;
-          font-size: style.$fontHeadingH4;
+      .history-img {
+        @include style.child-flex(40%, 40%);
+        text-align: center;
+        img:first-child {
+          transform: translate(-10px, -50px);
+          animation: image 2s ease-in-out;
+        }
+        img:last-child {
+          transform: translate(10px, 150px);
+          animation: image2 2s ease-in-out;
         }
       }
     }
   }
-}
-.working-dogs {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-  .h1-working-dogs {
-    margin: 30px;
-    font-size: style.$fontHeadingH3;
-    text-decoration: underline style.$colorAccent;
-  }
-  .container {
-    margin: 30px;
-  }
-  .working-dogs-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    .first {
-      flex: 0 0 50%;
-      max-width: 50%;
-      margin: 50px 0px;
-    }
-    .second {
-      flex: 0 0 50%;
-      max-width: 50%;
-      margin: 50px 0px;
-    }
-    p {
-      font-size: style.$fontCaptionText;
-      margin: 20px;
-      &::first-letter {
-        font-weight: bold;
-        font-size: style.$fontHeadingH4;
+
+  // ORIGINS
+
+  .origins {
+    .origins-img {
+      @include style.d-Flex;
+      div {
+        margin: 0px 20px 50px 20px;
+        text-align: center;
+        img {
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: style.$fontCaptionText;
+        }
       }
     }
-    img {
-      box-shadow: 0px 5px 10px style.$colorPrimary;
-      border-radius: 12px;
-      margin: 0px 50px;
+    .origins-p {
+      display: flex;
+      h2 {
+        text-align: center;
+        margin: 10px;
+      }
+      p {
+        font-size: style.$fontMediumText;
+      }
+    }
+  }
+
+  // BREEDS
+  .breeds {
+    .breeds-img {
+      @include style.d-Flex;
+      .first {
+        @include style.child-flex(50%, 50%);
+        text-align: center;
+        img {
+          margin: 50px;
+        }
+      }
+      .second {
+        @include style.child-flex(50%, 50%);
+        p {
+          font-size: style.$fontCaptionText;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  //  WORKING
+  .working-dogs {
+    .working-dogs-text {
+      @include style.d-Flex;
+      .first {
+        @include style.child-flex(50%, 50%);
+        margin: 50px 0px;
+      }
+      .second {
+        @include style.child-flex(50%, 50%);
+        margin: 50px 0px;
+      }
+      p {
+        font-size: style.$fontCaptionText;
+      }
+      img {
+        margin: 0px 50px;
+      }
+    }
+  }
+
+  // LIVING
+  .living {
+    .living-text {
+      @include style.d-Flex;
+      .first {
+        @include style.child-flex(50%, 50%);
+        margin: 50px 0px;
+      }
+      .second {
+        @include style.child-flex(50%, 50%);
+        margin: 50px 0px;
+      }
+      p {
+        font-size: style.$fontCaptionText;
+      }
+      img {
+        margin: 0px 50px;
+      }
     }
   }
 }

@@ -41,197 +41,153 @@
   filter: blur(0px);
 }
 
-.section {
+.main-content .section {
   padding: 0px 30px;
   z-index: 0;
-}
-
-.h1-history {
-  margin: 30px;
-  font-size: 40px;
-  -webkit-text-decoration: underline #a44ef5;
-          text-decoration: underline #a44ef5;
-  animation: h1 1.2s ease-in-out;
-}
-
-.history {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
 }
-.history .container {
-  min-height: 65vh;
+.main-content .container {
   margin: 30px;
+}
+.main-content h1 {
+  margin: 30px;
+  font-size: 40px;
+  -webkit-text-decoration: underline #a44ef5;
+          text-decoration: underline #a44ef5;
+}
+.main-content .dog-text {
+  margin: 0px 20px;
+}
+.main-content .dog-text::first-letter {
+  font-weight: bold;
+  font-size: 40px;
+}
+.main-content img {
+  box-shadow: 0px 5px 10px #16194f;
+  border-radius: 26px;
+}
+.main-content .history .h1-history {
+  animation: h1 1.2s ease-in-out;
+}
+.main-content .history .container {
+  min-height: 65vh;
   display: flex;
   align-items: center;
 }
-.history .container .history-p {
+.main-content .history .container .history-p {
   flex: 0 0 60%;
   max-width: 60%;
   font-size: 20px;
 }
-.history .container .history-p p {
+.main-content .history .container .history-p p {
   animation: text 2s ease-in-out;
 }
-.history .container .history-p p::first-letter {
-  font-weight: bold;
-  font-size: 40px;
-}
-.history .container .history-img {
+.main-content .history .container .history-img {
   flex: 0 0 40%;
   max-width: 40%;
   text-align: center;
 }
-.history .container .history-img img {
-  box-shadow: 0px 5px 10px #16194f;
-  border-radius: 26px;
-}
-.history .container .history-img img:first-child {
+.main-content .history .container .history-img img:first-child {
   transform: translate(-10px, -50px);
   animation: image 2s ease-in-out;
 }
-.history .container .history-img img:last-child {
+.main-content .history .container .history-img img:last-child {
   transform: translate(10px, 150px);
   animation: image2 2s ease-in-out;
 }
-
-.origins {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-}
-.origins .h1-origins {
-  margin: 30px;
-  font-size: 40px;
-  -webkit-text-decoration: underline #a44ef5;
-          text-decoration: underline #a44ef5;
-}
-.origins .container {
-  margin: 30px;
-}
-.origins .origins-img {
+.main-content .origins .origins-img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.origins .origins-img div {
+.main-content .origins .origins-img div {
   margin: 0px 20px 50px 20px;
   text-align: center;
 }
-.origins .origins-img div img {
-  box-shadow: 0px 5px 10px #16194f;
-  border-radius: 12px;
+.main-content .origins .origins-img div img {
   margin-bottom: 10px;
 }
-.origins .origins-img div p {
+.main-content .origins .origins-img div p {
   font-size: 15px;
 }
-.origins .origins-p {
+.main-content .origins .origins-p {
   display: flex;
-  z-index: 2;
 }
-.origins .origins-p h2 {
+.main-content .origins .origins-p h2 {
   text-align: center;
   margin: 10px;
 }
-.origins .origins-p p {
-  margin: 0px 20px;
+.main-content .origins .origins-p p {
   font-size: 17px;
 }
-.origins .origins-p p::first-letter {
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.breeds {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-}
-.breeds .h1-breeds {
-  margin: 30px;
-  font-size: 40px;
-  -webkit-text-decoration: underline #a44ef5;
-          text-decoration: underline #a44ef5;
-}
-.breeds .container {
-  margin: 30px;
-}
-.breeds .breeds-img {
+.main-content .breeds .breeds-img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.breeds .breeds-img .first {
+.main-content .breeds .breeds-img .first {
   flex: 0 0 50%;
   max-width: 50%;
   text-align: center;
 }
-.breeds .breeds-img .first img {
-  box-shadow: 0px 5px 10px #16194f;
-  border-radius: 12px;
+.main-content .breeds .breeds-img .first img {
   margin: 50px;
 }
-.breeds .breeds-img .second {
+.main-content .breeds .breeds-img .second {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.breeds .breeds-img .second p {
+.main-content .breeds .breeds-img .second p {
   font-size: 15px;
   margin-top: 50px;
 }
-.breeds .breeds-img .second p::first-letter {
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.working-dogs {
-  min-height: calc(100vh - 30px);
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  word-spacing: 1.6px;
-}
-.working-dogs .h1-working-dogs {
-  margin: 30px;
-  font-size: 40px;
-  -webkit-text-decoration: underline #a44ef5;
-          text-decoration: underline #a44ef5;
-}
-.working-dogs .container {
-  margin: 30px;
-}
-.working-dogs .working-dogs-text {
+.main-content .working-dogs .working-dogs-text {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.working-dogs .working-dogs-text .first {
+.main-content .working-dogs .working-dogs-text .first {
   flex: 0 0 50%;
   max-width: 50%;
   margin: 50px 0px;
 }
-.working-dogs .working-dogs-text .second {
+.main-content .working-dogs .working-dogs-text .second {
   flex: 0 0 50%;
   max-width: 50%;
   margin: 50px 0px;
 }
-.working-dogs .working-dogs-text p {
+.main-content .working-dogs .working-dogs-text p {
   font-size: 15px;
-  margin: 20px;
 }
-.working-dogs .working-dogs-text p::first-letter {
-  font-weight: bold;
-  font-size: 24px;
+.main-content .working-dogs .working-dogs-text img {
+  margin: 0px 50px;
 }
-.working-dogs .working-dogs-text img {
-  box-shadow: 0px 5px 10px #16194f;
-  border-radius: 12px;
+.main-content .living .living-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-content .living .living-text .first {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 50px 0px;
+}
+.main-content .living .living-text .second {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 50px 0px;
+}
+.main-content .living .living-text p {
+  font-size: 15px;
+}
+.main-content .living .living-text img {
   margin: 0px 50px;
 }
 
@@ -468,6 +424,8 @@
 * {
   margin: 0px;
   scroll-behavior: smooth;
+  transition: none !important;
+  animation: none !important;
 }
 
 body {
