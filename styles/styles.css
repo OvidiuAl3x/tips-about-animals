@@ -96,102 +96,147 @@
   animation: image2 2s ease-in-out;
 }
 
-.food {
+.origins {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
 }
-.food .h1-food {
+.origins .h1-origins {
   margin: 30px;
   font-size: 40px;
   -webkit-text-decoration: underline #a44ef5;
           text-decoration: underline #a44ef5;
 }
-.food .container {
+.origins .container {
   margin: 30px;
 }
-.food .food-img {
+.origins .origins-img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.food .food-img div {
+.origins .origins-img div {
   margin: 0px 20px 50px 20px;
   text-align: center;
 }
-.food .food-img div img {
+.origins .origins-img div img {
   box-shadow: 0px 5px 10px #16194f;
   border-radius: 12px;
   margin-bottom: 10px;
 }
-.food .food-img div p {
+.origins .origins-img div p {
   font-size: 15px;
 }
-.food .food-p {
+.origins .origins-p {
   display: flex;
   z-index: 2;
 }
-.food .food-p h2 {
+.origins .origins-p h2 {
   text-align: center;
   margin: 10px;
 }
-.food .food-p p {
+.origins .origins-p p {
   margin: 0px 20px;
   font-size: 17px;
 }
-.food .food-p p::first-letter {
+.origins .origins-p p::first-letter {
   font-weight: bold;
   font-size: 24px;
 }
 
-.treats {
+.breeds {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
 }
-.treats .h1-treats {
+.breeds .h1-breeds {
   margin: 30px;
   font-size: 40px;
   -webkit-text-decoration: underline #a44ef5;
           text-decoration: underline #a44ef5;
 }
-.treats .container {
+.breeds .container {
   margin: 30px;
 }
-.treats .treats-img {
+.breeds .breeds-img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.treats .treats-img .first {
+.breeds .breeds-img .first {
   flex: 0 0 50%;
   max-width: 50%;
   text-align: center;
 }
-.treats .treats-img .first img {
+.breeds .breeds-img .first img {
   box-shadow: 0px 5px 10px #16194f;
   border-radius: 12px;
   margin: 50px;
 }
-.treats .treats-img .second {
+.breeds .breeds-img .second {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.treats .treats-img .second p {
+.breeds .breeds-img .second p {
   font-size: 15px;
   margin-top: 50px;
 }
-.treats .treats-img .second p::first-letter {
+.breeds .breeds-img .second p::first-letter {
   font-weight: bold;
   font-size: 24px;
 }
 
+.working-dogs {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+}
+.working-dogs .h1-working-dogs {
+  margin: 30px;
+  font-size: 40px;
+  -webkit-text-decoration: underline #a44ef5;
+          text-decoration: underline #a44ef5;
+}
+.working-dogs .container {
+  margin: 30px;
+}
+.working-dogs .working-dogs-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.working-dogs .working-dogs-text .first {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 50px 0px;
+}
+.working-dogs .working-dogs-text .second {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 50px 0px;
+}
+.working-dogs .working-dogs-text p {
+  font-size: 15px;
+  margin: 20px;
+}
+.working-dogs .working-dogs-text p::first-letter {
+  font-weight: bold;
+  font-size: 24px;
+}
+.working-dogs .working-dogs-text img {
+  box-shadow: 0px 5px 10px #16194f;
+  border-radius: 12px;
+  margin: 0px 50px;
+}
+
 .reveal {
-  opacity: 1;
+  opacity: 0;
   position: relative;
 }
 
@@ -199,11 +244,15 @@
   opacity: 1;
 }
 
-.active .h1-food {
+.active .h1-origins {
   animation: h1-active 1.2s ease-in-out;
 }
 
-.active .h1-treats {
+.active .h1-breeds {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active .h1-working-dogs {
   animation: h1-active 1.2s ease-in-out;
 }
 
@@ -227,27 +276,27 @@
   animation: imageShuffler 1.5s ease-in-out 1.5s both;
 }
 
-.active [title=img-treats-1] {
+.active [title=img-breeds-1] {
   animation: imageShuffler 1.5s ease-in-out both;
 }
 
-.active [title=img-treats-2] {
+.active [title=img-breeds-2] {
   animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 
-.active .dog-food {
+.active .dog-origins {
   animation: text 2s ease-in-out;
 }
 
-.active .food-p h2 {
+.active .origins-p h2 {
   animation: text 2s ease-in-out;
 }
 
-.active [title=p-treats-1] {
+.active [title=p-breeds-1] {
   animation: imageShuffler 1.5s ease-in-out both;
 }
 
-.active [title=p-treats-2] {
+.active [title=p-breeds-2] {
   animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 

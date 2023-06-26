@@ -67,12 +67,12 @@
   }
 }
 
-.food {
+.origins {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
-  .h1-food {
+  .h1-origins {
     margin: 30px;
     font-size: style.$fontHeadingH3;
     text-decoration: underline style.$colorAccent;
@@ -80,7 +80,7 @@
   .container {
     margin: 30px;
   }
-  .food-img {
+  .origins-img {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,7 +99,7 @@
       }
     }
   }
-  .food-p {
+  .origins-p {
     display: flex;
     z-index: 2;
     h2 {
@@ -116,12 +116,12 @@
     }
   }
 }
-.treats {
+.breeds {
   min-height: calc(100vh - 30px);
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
-  .h1-treats {
+  .h1-breeds {
     margin: 30px;
     font-size: style.$fontHeadingH3;
     text-decoration: underline style.$colorAccent;
@@ -129,7 +129,7 @@
   .container {
     margin: 30px;
   }
-  .treats-img {
+  .breeds-img {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -158,9 +158,52 @@
     }
   }
 }
+.working-dogs {
+  min-height: calc(100vh - 30px);
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  word-spacing: 1.6px;
+  .h1-working-dogs {
+    margin: 30px;
+    font-size: style.$fontHeadingH3;
+    text-decoration: underline style.$colorAccent;
+  }
+  .container {
+    margin: 30px;
+  }
+  .working-dogs-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .first {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: 50px 0px;
+    }
+    .second {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: 50px 0px;
+    }
+    p {
+      font-size: style.$fontCaptionText;
+      margin: 20px;
+      &::first-letter {
+        font-weight: bold;
+        font-size: style.$fontHeadingH4;
+      }
+    }
+    img {
+      box-shadow: 0px 5px 10px style.$colorPrimary;
+      border-radius: 12px;
+      margin: 0px 50px;
+    }
+  }
+}
 
 .reveal {
-  opacity: 1;
+  opacity: 0;
   position: relative;
 }
 .reveal.active {
@@ -168,11 +211,15 @@
 }
 
 // H1 animation
-.active .h1-food {
+.active .h1-origins {
   animation: h1-active 1.2s ease-in-out;
 }
 
-.active .h1-treats {
+.active .h1-breeds {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active .h1-working-dogs {
   animation: h1-active 1.2s ease-in-out;
 }
 
@@ -193,25 +240,25 @@
   animation: imageShuffler 1.5s ease-in-out 1.5s both;
 }
 
-.active [title="img-treats-1"] {
+.active [title="img-breeds-1"] {
   animation: imageShuffler 1.5s ease-in-out both;
 }
-.active [title="img-treats-2"] {
+.active [title="img-breeds-2"] {
   animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 
 // text animation
-.active .dog-food {
+.active .dog-origins {
   animation: text 2s ease-in-out;
 }
-.active .food-p h2 {
+.active .origins-p h2 {
   animation: text 2s ease-in-out;
 }
 
-.active [title="p-treats-1"] {
+.active [title="p-breeds-1"] {
   animation: imageShuffler 1.5s ease-in-out both;
 }
-.active [title="p-treats-2"] {
+.active [title="p-breeds-2"] {
   animation: imageShuffler 1.5s ease-in-out 0.5s both;
 }
 

@@ -1,15 +1,18 @@
 import data from "./db.json" assert { type: "json" };
 
-const { history, food, treats, bowls, bed, leashes, collars, toys } = data.dog;
+const { history, origins, breeds, working_dogs, living, leashes, collars, toys } = data.dog;
 const getHistory = document.querySelector(".dog-history");
-const getFood = document.querySelectorAll(".dog-food");
-const getTreats = document.querySelectorAll(".dog-treats");
-// get.innerHTML = history + food + treats + `<h1>${bed}</h1>`;
+const getorigins = document.querySelectorAll(".dog-origins");
+const getbreeds = document.querySelectorAll(".dog-breeds");
+const getWorking = document.querySelectorAll(".working-dogs-p");
 getHistory.innerHTML += history;
 
-getFood.forEach(function (element) {
-  element.innerHTML += food;
+getorigins.forEach(function (element) {
+  element.innerHTML += origins;
 });
-getTreats.forEach(function (element) {
-  element.innerHTML += food;
+getbreeds.forEach(function (element) {
+  element.innerHTML += breeds;
+});
+getWorking.forEach(function (element) {
+  element.innerHTML += working_dogs;
 });
