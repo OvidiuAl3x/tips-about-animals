@@ -1,114 +1,115 @@
-
 // H1 animation
 .active .h1-origins {
-    animation: h1-active 1.2s ease-in-out;
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active .h1-breeds {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+.active .h1-working-dogs {
+  animation: h1-active 1.2s ease-in-out;
+}
+
+// Image animation
+.active [title="img-1"] {
+  animation: opacityAnim 1.5s ease-in-out both;
+}
+.active [title="img-2"] {
+  animation: opacityAnim 1.5s ease-in-out 0.25s both;
+}
+.active [title="img-3"] {
+  animation: opacityAnim 1.5s ease-in-out 0.5s both;
+}
+.active [title="img-4"] {
+  animation: opacityAnim 1.5s ease-in-out 1s both;
+}
+.active [title="img-5"] {
+  animation: opacityAnim 1.5s ease-in-out 1.5s both;
+}
+
+.active [title="img-1-anim"] {
+  animation: opacityAnim 1.5s ease-in-out both;
+}
+.active [title="img-2-anim"] {
+  animation: opacityAnim 1.5s ease-in-out 0.5s both;
+}
+
+// text animation
+.active .origins-p h2 {
+  animation: text 2s ease-in-out both;
+}
+
+.active .origins-p p {
+  animation: text 2s ease-in-out both;
+}
+
+.active .questions {
+  animation: text 2s ease-in-out both;
+}
+.active .questions .hide-answer {
+  animation: opacityAnim 1s ease-in-out both;
+}
+
+.active [title="text"] {
+  animation: opacityAnim 1.5s ease-in-out 0.5s both;
+}
+
+@keyframes image {
+  from {
+    opacity: 0;
+    position: relative;
+    transform: translate(-10px, -250px);
   }
-  
-  .active .h1-breeds {
-    animation: h1-active 1.2s ease-in-out;
+  to {
+    opacity: 1;
   }
-  
-  .active .h1-working-dogs {
-    animation: h1-active 1.2s ease-in-out;
+}
+@keyframes image2 {
+  from {
+    opacity: 0;
+    transform: translate(10px, 250px);
   }
-  
-  // Image animation
-  .active [title="img-1"] {
-    animation: opacityAnim 1.5s ease-in-out both;
+  to {
+    opacity: 1;
   }
-  .active [title="img-2"] {
-    animation: opacityAnim 1.5s ease-in-out 0.25s both;
+}
+
+@keyframes text {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
   }
-  .active [title="img-3"] {
-    animation: opacityAnim 1.5s ease-in-out 0.5s both;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  .active [title="img-4"] {
-    animation: opacityAnim 1.5s ease-in-out 1s both;
+}
+
+@keyframes h1 {
+  from {
+    transform: translateY(-200px);
   }
-  .active [title="img-5"] {
-    animation: opacityAnim 1.5s ease-in-out 1.5s both;
+  to {
+    transform: translateY(0);
   }
-  
-  .active [title="img-1-anim"] {
-    animation: opacityAnim 1.5s ease-in-out both;
+}
+@keyframes h1-active {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  .active [title="img-2-anim"] {
-    animation: opacityAnim 1.5s ease-in-out 0.5s both;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  // text animation
-  .active .dog-origins {
-    animation: text 2s ease-in-out 0.5s both;
+}
+
+@keyframes opacityAnim {
+  0% {
+    opacity: 0;
   }
-  .active .origins-p h2 {
-    animation: text 2s ease-in-out both;
+  100% {
+    opacity: 1;
   }
-  
-  .active [title="p-1-anim"] {
-    animation: opacityAnim 1.5s ease-in-out both;
-  }
-  .active [title="p-2-anim"] {
-    animation: opacityAnim 1.5s ease-in-out 0.5s both;
-  }
-  
-  @keyframes image {
-    from {
-      opacity: 0;
-      position: relative;
-      transform: translate(-10px, -250px);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-10px, -50px);
-    }
-  }
-  @keyframes image2 {
-    from {
-      opacity: 0;
-      transform: translate(10px, 250px);
-    }
-    to {
-      opacity: 1;
-      transform: translate(10px, 150px);
-    }
-  }
-  
-  @keyframes text {
-    from {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes h1 {
-    from {
-      transform: translateY(-200px);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-  @keyframes h1-active {
-    from {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes opacityAnim {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
+}

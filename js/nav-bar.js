@@ -16,6 +16,10 @@ const link = document.querySelector(".links");
 
 selectPage.addEventListener("click", function () {
   link.classList.toggle("link-show");
+  selectPage.style.transform =
+    selectPage.style.transform == "rotate(180deg)"
+      ? "rotate(360deg)"
+      : "rotate(180deg)";
 });
 
 // automatic close nav when pressed on link

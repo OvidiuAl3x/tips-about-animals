@@ -48,6 +48,8 @@
   line-height: 1.5;
   letter-spacing: 0.6px;
   word-spacing: 1.6px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 .main-content .container {
   margin: 30px;
@@ -73,7 +75,7 @@
   animation: h1 1.2s ease-in-out;
 }
 .main-content .history .container {
-  min-height: 65vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
 }
@@ -81,6 +83,7 @@
   flex: 0 0 60%;
   max-width: 60%;
   font-size: 20px;
+  margin: 0px 20px 0px 0px;
 }
 .main-content .history .container .history-p p {
   animation: text 2s ease-in-out;
@@ -90,13 +93,21 @@
   max-width: 40%;
   text-align: center;
 }
+.main-content .history .container .history-img img {
+  width: 400px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .main-content .history .container .history-img img:first-child {
-  transform: translate(-10px, -50px);
+  display: flex;
   animation: image 2s ease-in-out;
+  margin-bottom: 20px;
 }
 .main-content .history .container .history-img img:last-child {
-  transform: translate(10px, 150px);
+  display: flex;
   animation: image2 2s ease-in-out;
+  margin-left: auto;
 }
 .main-content .origins .origins-img {
   display: flex;
@@ -110,19 +121,21 @@
 }
 .main-content .origins .origins-img div img {
   margin-bottom: 10px;
-}
-.main-content .origins .origins-img div p {
-  font-size: 15px;
+  width: 250px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-content .origins .origins-p {
   display: flex;
+  margin-bottom: 20px;
 }
 .main-content .origins .origins-p h2 {
   text-align: center;
   margin: 10px;
 }
 .main-content .origins .origins-p p {
-  font-size: 17px;
+  font-size: 15px;
 }
 .main-content .breeds .breeds-img {
   display: flex;
@@ -130,13 +143,17 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.main-content .breeds .breeds-img img {
+  margin: 50px;
+  width: 250px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .main-content .breeds .breeds-img .first {
   flex: 0 0 50%;
   max-width: 50%;
   text-align: center;
-}
-.main-content .breeds .breeds-img .first img {
-  margin: 50px;
 }
 .main-content .breeds .breeds-img .second {
   flex: 0 0 50%;
@@ -167,12 +184,17 @@
 }
 .main-content .working-dogs .working-dogs-text img {
   margin: 0px 50px;
+  width: 250px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-content .living .living-text {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  font-size: 15px;
 }
 .main-content .living .living-text .first {
   flex: 0 0 50%;
@@ -184,11 +206,49 @@
   max-width: 50%;
   margin: 50px 0px;
 }
-.main-content .living .living-text p {
-  font-size: 15px;
+.main-content .quest-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.main-content .living .living-text img {
-  margin: 0px 50px;
+.main-content .quest-container .questions {
+  background-color: white;
+  border-radius: 26px;
+  padding: 20px;
+  margin: 10px 0px;
+  max-width: 50%;
+  min-width: 50%;
+}
+.main-content .quest-container .questions div {
+  display: flex;
+  align-items: center;
+}
+.main-content .quest-container .questions div p {
+  margin-right: auto;
+  font-weight: 600;
+}
+.main-content .quest-container .questions div span {
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.main-content .quest-container .questions div span:last-child {
+  font-size: 40px;
+}
+.main-content .quest-container .questions div .reveal-answer {
+  display: block;
+}
+.main-content .quest-container .questions div .close-answer {
+  display: none;
+}
+.main-content .quest-container .questions .hide-answer {
+  color: #6e70a2;
+  font-size: 15px;
+  display: none;
+}
+.main-content .quest-container .questions .hide-answer2 {
+  display: block;
 }
 
 .reveal {
@@ -308,6 +368,10 @@
   left: 0;
 }
 
+html {
+  scroll-snap-type: y proximity;
+}
+
 * {
   margin: 0px;
   scroll-behavior: smooth;
@@ -407,19 +471,23 @@ body {
   animation: opacityAnim 1.5s ease-in-out 0.5s both;
 }
 
-.active .dog-origins {
-  animation: text 2s ease-in-out 0.5s both;
-}
-
 .active .origins-p h2 {
   animation: text 2s ease-in-out both;
 }
 
-.active [title=p-1-anim] {
-  animation: opacityAnim 1.5s ease-in-out both;
+.active .origins-p p {
+  animation: text 2s ease-in-out both;
 }
 
-.active [title=p-2-anim] {
+.active .questions {
+  animation: text 2s ease-in-out both;
+}
+
+.active .questions .hide-answer {
+  animation: opacityAnim 1s ease-in-out both;
+}
+
+.active [title=text] {
   animation: opacityAnim 1.5s ease-in-out 0.5s both;
 }
 
@@ -431,7 +499,6 @@ body {
   }
   to {
     opacity: 1;
-    transform: translate(-10px, -50px);
   }
 }
 @keyframes image2 {
@@ -441,7 +508,6 @@ body {
   }
   to {
     opacity: 1;
-    transform: translate(10px, 150px);
   }
 }
 @keyframes text {

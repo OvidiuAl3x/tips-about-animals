@@ -1,5 +1,8 @@
 @use "../abstracts/index" as style;
 
+html {
+  scroll-snap-type: y proximity;
+}
 * {
   margin: 0px;
   scroll-behavior: smooth;
@@ -62,4 +65,3 @@ body {
     opacity: 1;
   }
 }
-

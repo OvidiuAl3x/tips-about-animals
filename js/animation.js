@@ -7,8 +7,7 @@ function reveal() {
     let elementVisible = 150;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
-    } 
-    else {
+    } else {
       reveals[i].classList.remove("active");
     }
   }
@@ -16,3 +15,27 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
+// Q&A animation
+
+const spanReveal = document.querySelectorAll(".reveal-answer");
+const closeReveal = document.querySelectorAll(".close-answer");
+const hide = document.querySelectorAll(".hide-answer");
+
+function reavealAnswer() {
+  hide.forEach(function (e) {
+    e.classList.toggle("hide-answer2");
+  });
+  closeReveal.forEach(function (e) {
+    e.classList.toggle("close-answer");
+  });
+  spanReveal.forEach(function (e) {
+    e.classList.toggle("close-answer");
+  });
+}
+
+spanReveal.forEach(function (e) {
+  e.addEventListener("click", reavealAnswer);
+});
+closeReveal.forEach(function (e) {
+  e.addEventListener("click", reavealAnswer);
+});

@@ -1,15 +1,6 @@
 import data from "./db.json" assert { type: "json" };
 
-const {
-  history,
-  origins,
-  breeds,
-  working_dogs,
-  living,
-  leashes,
-  collars,
-  toys,
-} = data.dog;
+const { history, origins, breeds, working_dogs, living } = data.dog;
 // const getHistory = document.querySelector(".dog-text");
 const getorigins = document.querySelectorAll(".dog-text");
 const getbreeds = document.querySelectorAll(".dog-breeds");
