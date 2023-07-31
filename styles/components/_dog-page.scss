@@ -127,6 +127,7 @@
   .working-dogs {
     .working-dogs-text {
       @include style.d-Flex;
+      justify-content: space-evenly;
       .first {
         @include style.child-flex(50%, 50%);
         margin: 50px 0px;
@@ -139,7 +140,6 @@
         font-size: style.$fontCaptionText;
       }
       img {
-        margin: 0px 50px;
         width: 250px;
         height: 300px;
         object-fit: cover;
@@ -167,14 +167,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
     .questions {
       background-color: white;
       border-radius: 26px;
       padding: 20px;
       margin: 10px 0px;
       max-width: 50%;
-      min-width: 50%;
 
       div {
         display: flex;
@@ -193,6 +191,7 @@
         }
         .reveal-answer {
           display: block;
+          margin-left: 30px;
         }
         .close-answer {
           display: none;
@@ -216,4 +215,95 @@
 }
 .reveal.active {
   opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  p {
+    font-size: style.$fontMediumText;
+  }
+  .history {
+    .container {
+      flex-direction: column;
+      .history-p {
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+        text-align: justify;
+      }
+      .history-img {
+        margin-top: 20px;
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+      }
+    }
+  }
+
+  .origins {
+    .origins-img {
+      div {
+        max-height: 150px;
+        max-width: 30%;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    .origins-p {
+      flex-direction: column;
+      text-align: justify;
+    }
+  }
+
+  .breeds {
+    flex-direction: column;
+    text-align: justify;
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+    .first {
+      @include style.child-flex(100%, 100%);
+      min-width: 100%;
+    }
+    .second {
+      @include style.child-flex(100%, 100%);
+      min-width: 100%;
+    }
+  }
+
+  .working-dogs {
+    .working-dogs-text {
+      .first {
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+      }
+      .second {
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+      }
+      img {
+        max-width: 150px;
+        max-height: 150px;
+        margin: 20px;
+      }
+    }
+  }
+
+  .living {
+    .living-text {
+      .first {
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+      }
+      .second {
+        @include style.child-flex(100%, 100%);
+        min-width: 100%;
+      }
+    }
+  }
+  .quest-container {
+    .questions {
+      min-width: 100%;
+    }
+  }
 }

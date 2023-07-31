@@ -168,6 +168,7 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .main-content .working-dogs .working-dogs-text .first {
   flex: 0 0 50%;
@@ -183,7 +184,6 @@
   font-size: 15px;
 }
 .main-content .working-dogs .working-dogs-text img {
-  margin: 0px 50px;
   width: 250px;
   height: 300px;
   -o-object-fit: cover;
@@ -218,7 +218,6 @@
   padding: 20px;
   margin: 10px 0px;
   max-width: 50%;
-  min-width: 50%;
 }
 .main-content .quest-container .questions div {
   display: flex;
@@ -238,6 +237,7 @@
 }
 .main-content .quest-container .questions div .reveal-answer {
   display: block;
+  margin-left: 30px;
 }
 .main-content .quest-container .questions div .close-answer {
   display: none;
@@ -260,6 +260,84 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 640px) {
+  p {
+    font-size: 17px;
+  }
+  .history .container {
+    flex-direction: column;
+  }
+  .history .container .history-p {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+    text-align: justify;
+  }
+  .history .container .history-img {
+    margin-top: 20px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .origins .origins-img div {
+    max-height: 150px;
+    max-width: 30%;
+  }
+  .origins .origins-img div img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .origins .origins-p {
+    flex-direction: column;
+    text-align: justify;
+  }
+  .breeds {
+    flex-direction: column;
+    text-align: justify;
+  }
+  .breeds img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .breeds .first {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .breeds .second {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .working-dogs .working-dogs-text .first {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .working-dogs .working-dogs-text .second {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .working-dogs .working-dogs-text img {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 20px;
+  }
+  .living .living-text .first {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .living .living-text .second {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .quest-container .questions {
+    min-width: 100%;
+  }
+}
 .main-container .aside {
   width: 270px;
   position: fixed;
@@ -375,6 +453,8 @@ html {
 * {
   margin: 0px;
   scroll-behavior: smooth;
+  transition: none !important;
+  animation: none !important;
 }
 
 body {
