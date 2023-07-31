@@ -45,3 +45,12 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .container-home {
+    height: auto;
+  }
+  .imgs-home-container {
+    min-width: 50%;
+  }
+}

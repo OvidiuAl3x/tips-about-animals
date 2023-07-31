@@ -41,6 +41,14 @@
   filter: blur(0px);
 }
 
+@media screen and (max-width: 640px) {
+  .container-home {
+    height: auto;
+  }
+  .imgs-home-container {
+    min-width: 50%;
+  }
+}
 .main-content .section {
   padding: 0px 30px;
   z-index: 0;
