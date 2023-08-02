@@ -1,7 +1,7 @@
 @use "../abstracts/index" as style;
 
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity!important;
 }
 * {
   margin: 0px;
